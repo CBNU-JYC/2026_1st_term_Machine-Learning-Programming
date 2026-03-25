@@ -44,14 +44,14 @@ My_project_0318/
 ├── page29_accuracy_sample.py
 ├── page33_metrics_sample.py
 ├── page36_roc_curve_sample.py
-├── Explanation_page14_sigmoid_sample.py
-├── Explanation_page16_hypothesis_sample.py
-├── Explanation_page20_cost_sample.py
-├── Explanation_page22_gradient_descent_sample.py
-├── Explanation_page27_confusion_matrix_sample.py
-├── Explanation_page29_accuracy_sample.py
-├── Explanation_page33_metrics_sample.py
-├── Explanation_page36_roc_curve_sample.py
+├── Z_Explanation_page14_sigmoid_sample.py
+├── Z_Explanation_page16_hypothesis_sample.py
+├── Z_Explanation_page20_cost_sample.py
+├── Z_Explanation_page22_gradient_descent_sample.py
+├── Z_Explanation_page27_confusion_matrix_sample.py
+├── Z_Explanation_page29_accuracy_sample.py
+├── Z_Explanation_page33_metrics_sample.py
+├── Z_Explanation_page36_roc_curve_sample.py
 └── page14_sigmoid_sample.png
 ```
 
@@ -85,28 +85,28 @@ My_project_0318/
 
 ### 설명용 코드
 
-- `Explanation_page14_sigmoid_sample.py`
+- `Z_Explanation_page14_sigmoid_sample.py`
   - 시그모이드 함수의 개념과 동작을 설명합니다.
 
-- `Explanation_page16_hypothesis_sample.py`
+- `Z_Explanation_page16_hypothesis_sample.py`
   - 가설 함수의 의미와 입력-출력 관계를 설명합니다.
 
-- `Explanation_page20_cost_sample.py`
+- `Z_Explanation_page20_cost_sample.py`
   - 비용 함수의 필요성과 계산 의미를 설명합니다.
 
-- `Explanation_page22_gradient_descent_sample.py`
+- `Z_Explanation_page22_gradient_descent_sample.py`
   - 경사하강법의 업데이트 원리와 학습률 개념을 설명합니다.
 
-- `Explanation_page27_confusion_matrix_sample.py`
+- `Z_Explanation_page27_confusion_matrix_sample.py`
   - 혼동행렬의 각 구성요소(TP, TN, FP, FN)를 설명합니다.
 
-- `Explanation_page29_accuracy_sample.py`
+- `Z_Explanation_page29_accuracy_sample.py`
   - 정확도의 해석과 한계를 설명합니다.
 
-- `Explanation_page33_metrics_sample.py`
+- `Z_Explanation_page33_metrics_sample.py`
   - 정밀도, 재현율, F1-score의 의미를 설명합니다.
 
-- `Explanation_page36_roc_curve_sample.py`
+- `Z_Explanation_page36_roc_curve_sample.py`
   - ROC Curve와 AUC 해석 방법을 설명합니다.
 
 ### 기타 파일
@@ -131,5 +131,5 @@ My_project_0318/
 ## 비고
 
 - `page*.py` 파일은 직접 실행용 예제입니다.
-- `Explanation_*.py` 파일은 개념 설명 중심 코드입니다.
+- `Z_Explanation_*.py` 파일은 개념 설명 중심 코드입니다.
 - 시각화 관련 코드는 실행 환경에 따라 그래프 창이 열릴 수 있습니다.
