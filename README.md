@@ -91,6 +91,33 @@ ML_Lecture/
 - 시그모이드 함수, 가설 함수, 비용 함수, 경사하강법, 혼동행렬, 정확도, 정밀도/재현율/F1, ROC Curve 등 분류 모델 평가 관련 예제가 포함되어 있습니다.
 - `Explanation_*.py` 파일은 설명용 코드, `page*.py` 파일은 실행용 예제 코드입니다.
 
+세부 파일 설명:
+
+- `page14_sigmoid_sample.py`: 시그모이드 함수의 기본 형태와 입력값에 따른 출력 변화를 확인하는 예제입니다.
+- `Explanation_page14_sigmoid_sample.py`: 시그모이드 함수의 의미와 동작 원리를 설명 중심으로 정리한 코드입니다.
+- `page14_sigmoid_sample.png`: 시그모이드 함수 시각화 결과 이미지입니다.
+
+- `page16_hypothesis_sample.py`: 로지스틱 회귀에서 사용하는 가설 함수 예제입니다.
+- `Explanation_page16_hypothesis_sample.py`: 가설 함수가 입력 특성으로부터 예측 확률을 만드는 과정을 설명합니다.
+
+- `page20_cost_sample.py`: 비용 함수의 계산 흐름과 예측 오차 반영 방식을 확인하는 예제입니다.
+- `Explanation_page20_cost_sample.py`: 비용 함수가 왜 필요한지와 학습 과정에서의 역할을 설명합니다.
+
+- `page22_gradient_descent_sample.py`: 경사하강법을 이용해 비용을 줄여가는 과정을 구현한 예제입니다.
+- `Explanation_page22_gradient_descent_sample.py`: 경사하강법의 업데이트 원리와 학습률 개념을 설명합니다.
+
+- `page27_confusion_matrix_sample.py`: 혼동행렬을 통해 분류 결과를 표 형태로 분석하는 예제입니다.
+- `Explanation_page27_confusion_matrix_sample.py`: TP, TN, FP, FN의 의미와 해석 방법을 설명합니다.
+
+- `page29_accuracy_sample.py`: 정확도(Accuracy)를 계산하는 기본 예제입니다.
+- `Explanation_page29_accuracy_sample.py`: 정확도가 어떤 상황에서 유용하고 한계가 무엇인지 설명합니다.
+
+- `page33_metrics_sample.py`: 정밀도, 재현율, F1-score 등 주요 분류 평가지표를 계산하는 예제입니다.
+- `Explanation_page33_metrics_sample.py`: 각 평가지표의 의미와 활용 상황을 설명합니다.
+
+- `page36_roc_curve_sample.py`: ROC Curve와 분류 임계값 변화에 따른 성능 비교 예제입니다.
+- `Explanation_page36_roc_curve_sample.py`: ROC Curve와 AUC의 개념, 해석 방법을 설명합니다.
+
 ## 7. 실행 방법
 
 터미널 또는 PyCharm에서 아래 예시처럼 실행할 수 있습니다.
