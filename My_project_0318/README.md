@@ -44,14 +44,14 @@ My_project_0318/
 ├── page29_accuracy_sample.py
 ├── page33_metrics_sample.py
 ├── page36_roc_curve_sample.py
-├── Z_Explanation_page14_sigmoid_sample.py
-├── Z_Explanation_page16_hypothesis_sample.py
-├── Z_Explanation_page20_cost_sample.py
-├── Z_Explanation_page22_gradient_descent_sample.py
-├── Z_Explanation_page27_confusion_matrix_sample.py
-├── Z_Explanation_page29_accuracy_sample.py
-├── Z_Explanation_page33_metrics_sample.py
-├── Z_Explanation_page36_roc_curve_sample.py
+├── z_Explanation_page14_sigmoid_sample.py
+├── z_Explanation_page16_hypothesis_sample.py
+├── z_Explanation_page20_cost_sample.py
+├── z_Explanation_page22_gradient_descent_sample.py
+├── z_Explanation_page27_confusion_matrix_sample.py
+├── z_Explanation_page29_accuracy_sample.py
+├── z_Explanation_page33_metrics_sample.py
+├── z_Explanation_page36_roc_curve_sample.py
 └── page14_sigmoid_sample.png
 ```
 
@@ -61,41 +61,41 @@ My_project_0318/
 
 - 시그모이드 함수
   - `page14_sigmoid_sample.py`: 시그모이드 함수의 기본 형태와 출력 변화를 확인하는 예제입니다.
-  - `Z_Explanation_page14_sigmoid_sample.py`: 시그모이드 함수의 개념과 동작을 설명합니다.
+  - `z_Explanation_page14_sigmoid_sample.py`: 시그모이드 함수의 개념과 동작을 설명합니다.
   - `page14_sigmoid_sample.png`: 시그모이드 함수 시각화 결과 이미지입니다.
 
 - 가설 함수
   - `page16_hypothesis_sample.py`: 로지스틱 회귀의 가설 함수를 예제로 보여주는 코드입니다.
-  - `Z_Explanation_page16_hypothesis_sample.py`: 가설 함수의 의미와 입력-출력 관계를 설명합니다.
+  - `z_Explanation_page16_hypothesis_sample.py`: 가설 함수의 의미와 입력-출력 관계를 설명합니다.
 
 - 비용 함수
   - `page20_cost_sample.py`: 비용 함수 계산 과정을 실습하는 코드입니다.
-  - `Z_Explanation_page20_cost_sample.py`: 비용 함수의 필요성과 계산 의미를 설명합니다.
+  - `z_Explanation_page20_cost_sample.py`: 비용 함수의 필요성과 계산 의미를 설명합니다.
 
 - 경사하강법
   - `page22_gradient_descent_sample.py`: 경사하강법을 이용해 비용을 줄여가는 과정을 구현한 코드입니다.
-  - `Z_Explanation_page22_gradient_descent_sample.py`: 경사하강법의 업데이트 원리와 학습률 개념을 설명합니다.
+  - `z_Explanation_page22_gradient_descent_sample.py`: 경사하강법의 업데이트 원리와 학습률 개념을 설명합니다.
 
 - 혼동행렬
   - `page27_confusion_matrix_sample.py`: 혼동행렬 계산 및 분류 결과 분석 예제입니다.
-  - `Z_Explanation_page27_confusion_matrix_sample.py`: 혼동행렬의 각 구성요소(TP, TN, FP, FN)를 설명합니다.
+  - `z_Explanation_page27_confusion_matrix_sample.py`: 혼동행렬의 각 구성요소(TP, TN, FP, FN)를 설명합니다.
 
 - 정확도
   - `page29_accuracy_sample.py`: 정확도(Accuracy)를 계산하는 예제입니다.
-  - `Z_Explanation_page29_accuracy_sample.py`: 정확도의 해석과 한계를 설명합니다.
+  - `z_Explanation_page29_accuracy_sample.py`: 정확도의 해석과 한계를 설명합니다.
 
 - 정밀도/재현율/F1-score
   - `page33_metrics_sample.py`: 정밀도, 재현율, F1-score를 계산하는 예제입니다.
-  - `Z_Explanation_page33_metrics_sample.py`: 각 평가지표의 의미를 설명합니다.
+  - `z_Explanation_page33_metrics_sample.py`: 각 평가지표의 의미를 설명합니다.
 
 - ROC Curve / AUC
   - `page36_roc_curve_sample.py`: ROC Curve와 AUC 개념을 실습하는 예제입니다.
-  - `Z_Explanation_page36_roc_curve_sample.py`: ROC Curve와 AUC 해석 방법을 설명합니다.
+  - `z_Explanation_page36_roc_curve_sample.py`: ROC Curve와 AUC 해석 방법을 설명합니다.
 
 ### 파일 구분
 
 - `page*.py` 파일은 직접 실행용 예제입니다.
-- `Z_Explanation_*.py` 파일은 개념 설명 중심 코드입니다.
+- `z_Explanation_*.py` 파일은 개념 설명 중심 코드입니다.
 
 ## 실행 결과 예시
 
@@ -114,5 +114,5 @@ My_project_0318/
 ## 비고
 
 - `page*.py` 파일은 직접 실행용 예제입니다.
-- `Z_Explanation_*.py` 파일은 개념 설명 중심 코드입니다.
+- `z_Explanation_*.py` 파일은 개념 설명 중심 코드입니다.
 - 시각화 관련 코드는 실행 환경에 따라 그래프 창이 열릴 수 있습니다.
