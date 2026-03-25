@@ -80,10 +80,38 @@ ML_Lecture/
 - `stockdata.csv`를 기반으로 13, 14, 16, 19페이지 실습 코드를 재구성한 폴더입니다.
 - 결측치 처리, 표준화, 정규화, 데이터 분할 결과까지 함께 저장되어 있습니다.
 
+세부 파일 설명:
+
+- `page13_code.py`: `stockdata.csv`를 불러오고 상위 행과 데이터 기본 정보를 확인하는 코드입니다.
+- `page14_code.py`: 결측치 여부를 점검하고, 예시로 `MSFT` 컬럼에 대해 중앙값 기반 처리 흐름을 실습하는 코드입니다.
+- `page16_code.py`: 주가 데이터의 수치형 컬럼을 표준화 및 정규화하고, 결과를 저장하는 코드입니다.
+- `page19_code.py`: `stockdata.csv`를 학습/검증/테스트 세트로 `6:2:2` 비율 분할하는 코드입니다.
+
+- `stockdata.csv`: 원본 주가 데이터 파일입니다.
+- `stockdata_processed.csv`: 결측치 처리 예제를 거친 결과 저장 파일입니다.
+- `stockdata_standardized.csv`: 표준화 결과 저장 파일입니다.
+- `stockdata_normalized.csv`: 정규화 결과 저장 파일입니다.
+- `stock_train.csv`: 데이터 분할 후 학습용 데이터입니다.
+- `stock_valid.csv`: 데이터 분할 후 검증용 데이터입니다.
+- `stock_test.csv`: 데이터 분할 후 테스트용 데이터입니다.
+- `README.md`: `Homework_0311` 폴더 자체 설명 파일입니다.
+
 ### `My_project_0311`
 
 - `housing.csv`를 기반으로 13, 14, 16, 19페이지 실습을 정리한 폴더입니다.
 - 데이터 로드, 결측치 처리, 스케일링, 데이터 분할 과정을 포함합니다.
+
+세부 파일 설명:
+
+- `page13_code.py`: `housing.csv`를 불러오고 상위 5개 행과 데이터프레임 정보를 출력하는 코드입니다.
+- `page14_code.py`: `total_bedrooms` 컬럼 결측치를 확인하고 중앙값으로 대체하는 코드입니다.
+- `page16_code.py`: 수치형 특성에 대해 표준화와 Min-Max 정규화를 수행하는 코드입니다.
+- `page19_code.py`: 전체 데이터를 학습/검증/테스트 세트로 `6:2:2` 비율로 분할하는 코드입니다.
+
+- `datasets/housing.csv`: 원본 주택 데이터 파일입니다.
+- `datasets/housing_train.csv`: 학습용 데이터 파일입니다.
+- `datasets/housing_valid.csv`: 검증용 데이터 파일입니다.
+- `datasets/housing_test.csv`: 테스트용 데이터 파일입니다.
 
 ### `My_project_0318`
 
