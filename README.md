@@ -31,6 +31,12 @@ git commit -m "Update lecture files"
 git push cbnu2026 main
 ```
 
+## 하위 폴더 바로가기
+
+- [Homework_0311](./Homework_0311/README.md)
+- [My_project_0311](./My_project_0311/README.md)
+- [My_project_0318](./My_project_0318/README.md)
+
 ## 1. 강의 자료 링크
 
 - EIS 강의 자료: [https://eisn.cbnu.ac.kr/nxui/index.html?OBSC_YN=0&LNG=ko#main](https://eisn.cbnu.ac.kr/nxui/index.html?OBSC_YN=0&LNG=ko#main)
