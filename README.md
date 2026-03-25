@@ -1,68 +1,159 @@
-# 2026 1st Term Machine Learning Programming
+# 2026 1학기 머신러닝 프로그래밍
 
-충북대학교 산업인공지능학과 `머신러닝 프로그래밍(8884005-01)` 수업 실습 자료와 코드, 결과물을 정리한 저장소입니다.
+![GitHub repo size](https://img.shields.io/github/repo-size/CBNU-JYC/2026_1st_term_Machine-Learning-Programming)
+![GitHub last commit](https://img.shields.io/github/last-commit/CBNU-JYC/2026_1st_term_Machine-Learning-Programming)
+![Python](https://img.shields.io/badge/Python-Anaconda%20Environment-3776AB?logo=python&logoColor=white)
+![PyCharm](https://img.shields.io/badge/Editor-PyCharm-000000?logo=pycharm&logoColor=white)
+![Course](https://img.shields.io/badge/Course-Machine%20Learning%20Programming-0A7E8C)
 
-이 저장소는 `ML_Lecture` 폴더 기준으로 구성되어 있으며, 강의 실습 코드와 생성 결과 파일을 날짜별 프로젝트 폴더로 관리합니다.
+충북대학교 산업인공지능학 전공 `머신러닝 프로그래밍` 강의의 실습 코드, 설명 파일, 실행 결과물, 환경 설정을 정리한 저장소입니다.
 
-## Quick Start
+이 저장소는 강의 실습 내용을 날짜별 프로젝트 형태로 정리하고, Python 실습 코드와 설명용 파이썬 파일, 생성된 데이터셋 결과물까지 함께 관리하는 것을 목표로 합니다.
 
-처음 실행할 때는 아래 순서대로 보면 됩니다.
+## 한눈에 보기
 
-1. 프로젝트 폴더 열기
+- 강의명: `머신러닝 프로그래밍`
+- 학기: `2026년 1학기`
+- 저장소: <https://github.com/CBNU-JYC/2026_1st_term_Machine-Learning-Programming.git>
+- 개발 환경: `Anaconda Navigator + PyCharm`
+- 실습 핵심 주제:
+  - 데이터 불러오기와 기초 확인
+  - 결측치 처리
+  - 표준화와 정규화
+  - 데이터 분할
+  - 시그모이드 함수, 비용 함수, 경사하강법
+  - 혼동행렬, 정확도, 정밀도, 재현율, F1-score, ROC Curve
+- 하위 폴더 바로가기:
+  - [Homework_0311](./Homework_0311/README.md)
+  - [My_project_0311](./My_project_0311/README.md)
+  - [My_project_0318](./My_project_0318/README.md)
+
+## 1. 저장소 정보
+
+- 저장소 이름: `2026_1st_term_Machine-Learning-Programming`
+- GitHub 주소: <https://github.com/CBNU-JYC/2026_1st_term_Machine-Learning-Programming.git>
+- GitHub 계정: `draonfe73@chungbuk.ac.kr`
+
+## 2. 강의 자료 링크
+
+- 충북대학교 EISN 강의 자료 링크:
+  <https://eisn.cbnu.ac.kr/nxui/index.html?OBSC_YN=0&LNG=ko#main>
+
+## 3. 교과목 정보
+
+- 개설연도-학기: `2026년 1학기`
+- 개설학과: `산업인공지능학`
+- 교과목번호-분반번호: `8884005-01`
+- 교과목명: `머신러닝 프로그래밍`
+- 이수구분: `전공심화`
+- 학점/시수: `3-3-0`
+- 강의시간/강의실: `수 11, 12, 13 [E10-401]`
+- 담당교수: `채민선(초빙교원)`
+- 전화: `0000000000`
+- 이메일: `mschae@cbnu.ac.kr`
+- 학과전화: `043-249-1257`
+
+## 4. 교과목 개요
+
+### 강의 개요
+
+머신러닝의 기본 개념과 주요 알고리즘을 이론과 실습을 통해 학습합니다.
+
+분류, 회귀, 서포트 벡터 머신, 결정트리, 앙상블 학습, 차원 축소, 군집 분석, 이상탐지 등 전통적 머신러닝 기법을 단계적으로 학습하며, 각 알고리즘의 적용 목적과 한계를 이해하는 것을 목표로 합니다.
+
+또한 모델 훈련, 성능 평가, 하이퍼파라미터 튜닝 등 실무 및 연구 현장에서 필요한 머신러닝 개발 절차를 경험하고, 직접 구현한 결과를 해석하는 능력을 기릅니다.
+
+### 학습목표
+
+1. 머신러닝의 기본 개념과 학습 유형을 이해하고 문제 유형에 맞는 접근 방법을 설명할 수 있다.
+2. 머신러닝 알고리즘의 원리와 특징을 이해하고 활용할 수 있다.
+3. 주어진 데이터와 문제 상황에 대해 적절한 모델을 선택하고 프로젝트 형태로 문제를 해결할 수 있다.
+
+## 5. 개발 및 실행 환경
+
+- Python 환경: `Anaconda Navigator` 기반의 `PyCharm` 가상환경
+- 프로젝트 열기 경로:
+  `/Users/jeong-yongcheol/Desktop/00_CBNU_AI/My_project/ML_Lecture/`
+- 실습 중 `Codex AI`의 도움을 받아 코드 설명 파일 작성, 실행 확인, README 정리 작업을 보조함
+
+## 6. 빠른 시작
+
+### 저장소 열기
+
 ```bash
 cd /Users/jeong-yongcheol/Desktop/00_CBNU_AI/My_project/ML_Lecture
 ```
 
-2. 대표 실습 코드 실행
+### 권장 실행 환경
+
+- `Anaconda Navigator`에서 사용하는 Python 환경을 활성화한 뒤 실행
+- `PyCharm`에서 위 프로젝트 경로를 그대로 열어 실습
+
+### 대표 실습 예시 1: 주택 데이터 불러오기
+
 ```bash
-python3 Homework_0311/page13_code.py
-python3 My_project_0311/page16_code.py
-python3 My_project_0318/page22_gradient_descent_sample.py
+cd My_project_0311
+python3 page13_code.py
 ```
 
-3. 결과 확인
-- 생성된 CSV 파일은 각 프로젝트 폴더 안에 저장됩니다.
-- GitHub 저장소 첫 화면에서는 `README.md`와 폴더 구조를 확인할 수 있습니다.
+### 대표 실습 예시 2: 주가 데이터 전처리
 
-4. 변경 후 GitHub 반영
 ```bash
-git add .
-git commit -m "Update lecture files"
-git push cbnu2026 main
+cd Homework_0311
+python3 page16_code.py
 ```
 
-## 하위 폴더 바로가기
+### 대표 실습 예시 3: 경사하강법 실습
 
-- [Homework_0311](./Homework_0311/README.md)
-- [My_project_0311](./My_project_0311/README.md)
-- [My_project_0318](./My_project_0318/README.md)
+```bash
+cd My_project_0318
+python3 page22_gradient_descent_sample.py
+```
 
-## 1. 강의 자료 링크
+## 7. 대표 실행 예시
 
-- EIS 강의 자료: [https://eisn.cbnu.ac.kr/nxui/index.html?OBSC_YN=0&LNG=ko#main](https://eisn.cbnu.ac.kr/nxui/index.html?OBSC_YN=0&LNG=ko#main)
+### 주택 데이터 불러오기 예시
 
-## 2. GitHub 저장소 정보
+```text
+---- Housing Data Head ----
+longitude  latitude  ...  median_house_value  ocean_proximity
+...
 
-- GitHub 계정: `draonfe73@chungbuk.ac.kr`
-- 저장소 이름: `2026_1st_term_Machine-Learning-Programming`
-- Git URL: [https://github.com/CBNU-JYC/2026_1st_term_Machine-Learning-Programming.git](https://github.com/CBNU-JYC/2026_1st_term_Machine-Learning-Programming.git)
+--- Housing Data Info ---
+RangeIndex: 20640 entries, 0 to 20639
+Data columns (total 10 columns):
+...
+```
 
-## 3. 개발 환경
+### 주가 데이터 정규화 결과 예시
 
-- Python 실행 환경: `Anaconda Navigator`의 `PyCharm` 가상환경
-- 프로젝트 열기 경로: `/Users/jeong-yongcheol/Desktop/00_CBNU_AI/My_project/ML_Lecture/`
-- 학습 및 코드 보조: `Codex AI`
+- `page16_code.py` 실행 시 `stockdata_standardized.csv`와 `stockdata_normalized.csv`가 생성됩니다.
+- `page19_code.py` 실행 시 `stock_train.csv`, `stock_valid.csv`, `stock_test.csv`가 생성됩니다.
 
-## 4. 강의 노트 및 원본 파일 위치
+### 분류 개념 실습 예시
 
-- 맥북 로컬 경로:
+- `page14_sigmoid_sample.py` 실행 시 시그모이드 함수 개념을 확인할 수 있습니다.
+- `page22_gradient_descent_sample.py` 실행 시 경사하강법의 파라미터 업데이트 과정을 확인할 수 있습니다.
+- `page27_confusion_matrix_sample.py`, `page33_metrics_sample.py`, `page36_roc_curve_sample.py`를 통해 분류 성능 평가 흐름을 확인할 수 있습니다.
+
+## 8. 강의 노트 및 원본 자료 위치
+
+- 맥북 로컬 참고 경로:
   `/Users/jeong-yongcheol/Desktop/00_CBNU_AI/2_(대학원, 본교 E10-401)머신러닝 프로그래밍 (8884005-01) , 채민선교수`
 
-## 5. 저장소 폴더 구조
+## 9. 주차별 학습 정리
+
+| 주차/폴더 | 핵심 주제 | 주요 파일 | 결과물 |
+|---|---|---|---|
+| `My_project_0311` | 데이터 불러오기, 결측치 처리, 스케일링, 데이터 분할 | `page13_code.py`, `page14_code.py`, `page16_code.py`, `page19_code.py` | `housing_train.csv`, `housing_valid.csv`, `housing_test.csv` |
+| `Homework_0311` | 주가 데이터 기반 전처리 및 분할 실습 | `page13_code.py`, `page14_code.py`, `page16_code.py`, `page19_code.py` | `stockdata_processed.csv`, `stockdata_standardized.csv`, `stockdata_normalized.csv`, `stock_train.csv`, `stock_valid.csv`, `stock_test.csv` |
+| `My_project_0318` | 로지스틱 회귀 개념 및 분류 성능 평가 | `page14_sigmoid_sample.py`, `page22_gradient_descent_sample.py`, `page27_confusion_matrix_sample.py`, `page33_metrics_sample.py`, `page36_roc_curve_sample.py` | `page14_sigmoid_sample.png` |
+| `Homework_0325` | 후속 실습용 폴더 | 현재 비어 있음 | 추후 추가 예정 |
+
+## 10. 현재 저장소 구조
 
 ```text
 ML_Lecture/
-├── README.md
 ├── Homework_0311/
 │   ├── README.md
 │   ├── page13_code.py
@@ -76,179 +167,97 @@ ML_Lecture/
 │   ├── stock_train.csv
 │   ├── stock_valid.csv
 │   └── stock_test.csv
+├── Homework_0325/
 ├── My_project_0311/
-│   ├── datasets/
-│   │   ├── housing.csv
-│   │   ├── housing_train.csv
-│   │   ├── housing_valid.csv
-│   │   └── housing_test.csv
+│   ├── README.md
 │   ├── page13_code.py
 │   ├── page14_code.py
 │   ├── page16_code.py
-│   └── page19_code.py
-└── My_project_0318/
-    ├── page14_sigmoid_sample.py
-    ├── page16_hypothesis_sample.py
-    ├── page20_cost_sample.py
-    ├── page22_gradient_descent_sample.py
-    ├── page27_confusion_matrix_sample.py
-    ├── page29_accuracy_sample.py
-    ├── page33_metrics_sample.py
-    ├── page36_roc_curve_sample.py
-    ├── z_Explanation_page14_sigmoid_sample.py
-    ├── z_Explanation_page16_hypothesis_sample.py
-    ├── z_Explanation_page20_cost_sample.py
-    ├── z_Explanation_page22_gradient_descent_sample.py
-    ├── z_Explanation_page27_confusion_matrix_sample.py
-    ├── z_Explanation_page29_accuracy_sample.py
-    ├── z_Explanation_page33_metrics_sample.py
-    ├── z_Explanation_page36_roc_curve_sample.py
-    └── page14_sigmoid_sample.png
+│   ├── page19_code.py
+│   └── datasets/
+│       ├── housing.csv
+│       ├── housing_train.csv
+│       ├── housing_valid.csv
+│       └── housing_test.csv
+├── My_project_0318/
+│   ├── README.md
+│   ├── page14_sigmoid_sample.py
+│   ├── page16_hypothesis_sample.py
+│   ├── page20_cost_sample.py
+│   ├── page22_gradient_descent_sample.py
+│   ├── page27_confusion_matrix_sample.py
+│   ├── page29_accuracy_sample.py
+│   ├── page33_metrics_sample.py
+│   ├── page36_roc_curve_sample.py
+│   ├── z_Explanation_page14_sigmoid_sample.py
+│   ├── z_Explanation_page16_hypothesis_sample.py
+│   ├── z_Explanation_page20_cost_sample.py
+│   ├── z_Explanation_page22_gradient_descent_sample.py
+│   ├── z_Explanation_page27_confusion_matrix_sample.py
+│   ├── z_Explanation_page29_accuracy_sample.py
+│   ├── z_Explanation_page33_metrics_sample.py
+│   ├── z_Explanation_page36_roc_curve_sample.py
+│   └── page14_sigmoid_sample.png
+├── .gitignore
+└── README.md
 ```
 
-## 6. 폴더별 설명
+## 11. 디렉토리별 설명
 
 ### `Homework_0311`
 
-- `stockdata.csv`를 기반으로 13, 14, 16, 19페이지 실습 코드를 재구성한 폴더입니다.
-- 결측치 처리, 표준화, 정규화, 데이터 분할 결과까지 함께 저장되어 있습니다.
-
-세부 파일 설명:
-
-- `page13_code.py`: `stockdata.csv`를 불러오고 상위 행과 데이터 기본 정보를 확인하는 코드입니다.
-- `page14_code.py`: 결측치 여부를 점검하고, 예시로 `MSFT` 컬럼에 대해 중앙값 기반 처리 흐름을 실습하는 코드입니다.
-- `page16_code.py`: 주가 데이터의 수치형 컬럼을 표준화 및 정규화하고, 결과를 저장하는 코드입니다.
-- `page19_code.py`: `stockdata.csv`를 학습/검증/테스트 세트로 `6:2:2` 비율 분할하는 코드입니다.
-
-- `stockdata.csv`: 원본 주가 데이터 파일입니다.
-- `stockdata_processed.csv`: 결측치 처리 예제를 거친 결과 저장 파일입니다.
-- `stockdata_standardized.csv`: 표준화 결과 저장 파일입니다.
-- `stockdata_normalized.csv`: 정규화 결과 저장 파일입니다.
-- `stock_train.csv`: 데이터 분할 후 학습용 데이터입니다.
-- `stock_valid.csv`: 데이터 분할 후 검증용 데이터입니다.
-- `stock_test.csv`: 데이터 분할 후 테스트용 데이터입니다.
-- `README.md`: `Homework_0311` 폴더 자체 설명 파일입니다.
+- `stockdata.csv`를 기반으로 13, 14, 16, 19페이지 실습을 재구성한 폴더입니다.
+- 결측치 처리, 표준화, 정규화, 데이터 분할을 실습합니다.
+- 실행 결과로 여러 CSV 파일이 생성되어 함께 저장되어 있습니다.
+- 자세한 설명은 [Homework_0311/README.md](./Homework_0311/README.md)를 참고합니다.
 
 ### `My_project_0311`
 
 - `housing.csv`를 기반으로 13, 14, 16, 19페이지 실습을 정리한 폴더입니다.
 - 데이터 로드, 결측치 처리, 스케일링, 데이터 분할 과정을 포함합니다.
-
-세부 파일 설명:
-
-- `page13_code.py`: `housing.csv`를 불러오고 상위 5개 행과 데이터프레임 정보를 출력하는 코드입니다.
-- `page14_code.py`: `total_bedrooms` 컬럼 결측치를 확인하고 중앙값으로 대체하는 코드입니다.
-- `page16_code.py`: 수치형 특성에 대해 표준화와 Min-Max 정규화를 수행하는 코드입니다.
-- `page19_code.py`: 전체 데이터를 학습/검증/테스트 세트로 `6:2:2` 비율로 분할하는 코드입니다.
-
-- `datasets/housing.csv`: 원본 주택 데이터 파일입니다.
-- `datasets/housing_train.csv`: 학습용 데이터 파일입니다.
-- `datasets/housing_valid.csv`: 검증용 데이터 파일입니다.
-- `datasets/housing_test.csv`: 테스트용 데이터 파일입니다.
+- `datasets/` 폴더에 원본과 분할 결과 파일이 함께 정리되어 있습니다.
+- 자세한 설명은 [My_project_0311/README.md](./My_project_0311/README.md)를 참고합니다.
 
 ### `My_project_0318`
 
-- 3월 18일 실습 내용을 정리한 폴더입니다.
-- 시그모이드 함수, 가설 함수, 비용 함수, 경사하강법, 혼동행렬, 정확도, 정밀도/재현율/F1, ROC Curve 등 분류 모델 평가 관련 예제가 포함되어 있습니다.
-- `z_Explanation_*.py` 파일은 설명용 코드, `page*.py` 파일은 실행용 예제 코드입니다.
+- 3월 18일 분류 개념 중심 실습을 정리한 폴더입니다.
+- 시그모이드 함수, 가설 함수, 비용 함수, 경사하강법, 혼동행렬, 정확도, 정밀도/재현율/F1, ROC Curve 예제가 포함되어 있습니다.
+- `page*.py`는 실행용 예제, `z_Explanation_*.py`는 설명용 코드입니다.
+- 자세한 설명은 [My_project_0318/README.md](./My_project_0318/README.md)를 참고합니다.
 
-세부 파일 설명:
+### `Homework_0325`
 
-- `page14_sigmoid_sample.py`: 시그모이드 함수의 기본 형태와 입력값에 따른 출력 변화를 확인하는 예제입니다.
-- `z_Explanation_page14_sigmoid_sample.py`: 시그모이드 함수의 의미와 동작 원리를 설명 중심으로 정리한 코드입니다.
-- `page14_sigmoid_sample.png`: 시그모이드 함수 시각화 결과 이미지입니다.
+- 3월 25일 이후 실습을 위한 작업 폴더입니다.
+- 현재는 비어 있으며, 후속 실습 자료가 추가될 예정입니다.
 
-- `page16_hypothesis_sample.py`: 로지스틱 회귀에서 사용하는 가설 함수 예제입니다.
-- `z_Explanation_page16_hypothesis_sample.py`: 가설 함수가 입력 특성으로부터 예측 확률을 만드는 과정을 설명합니다.
+## 12. 포함 파일 안내
 
-- `page20_cost_sample.py`: 비용 함수의 계산 흐름과 예측 오차 반영 방식을 확인하는 예제입니다.
-- `z_Explanation_page20_cost_sample.py`: 비용 함수가 왜 필요한지와 학습 과정에서의 역할을 설명합니다.
+- 이 저장소에는 코드 파일뿐 아니라 실습 중 생성된 CSV 결과물도 함께 포함되어 있습니다.
+- 일부 폴더에는 실행 중 자동 생성된 `__pycache__`가 로컬에 존재할 수 있으나, Git 추적 대상은 아닙니다.
+- 설명용 파일은 강의 복습과 코드 이해를 돕기 위해 별도로 작성한 버전입니다.
+- 설명 파일 이름은 현재 저장소 기준으로 `z_Explanation_*` 형식을 사용합니다.
 
-- `page22_gradient_descent_sample.py`: 경사하강법을 이용해 비용을 줄여가는 과정을 구현한 예제입니다.
-- `z_Explanation_page22_gradient_descent_sample.py`: 경사하강법의 업데이트 원리와 학습률 개념을 설명합니다.
+## 13. GitHub 업로드 관련 메모
 
-- `page27_confusion_matrix_sample.py`: 혼동행렬을 통해 분류 결과를 표 형태로 분석하는 예제입니다.
-- `z_Explanation_page27_confusion_matrix_sample.py`: TP, TN, FP, FN의 의미와 해석 방법을 설명합니다.
-
-- `page29_accuracy_sample.py`: 정확도(Accuracy)를 계산하는 기본 예제입니다.
-- `z_Explanation_page29_accuracy_sample.py`: 정확도가 어떤 상황에서 유용하고 한계가 무엇인지 설명합니다.
-
-- `page33_metrics_sample.py`: 정밀도, 재현율, F1-score 등 주요 분류 평가지표를 계산하는 예제입니다.
-- `z_Explanation_page33_metrics_sample.py`: 각 평가지표의 의미와 활용 상황을 설명합니다.
-
-- `page36_roc_curve_sample.py`: ROC Curve와 분류 임계값 변화에 따른 성능 비교 예제입니다.
-- `z_Explanation_page36_roc_curve_sample.py`: ROC Curve와 AUC의 개념, 해석 방법을 설명합니다.
-
-## 7. 실행 방법
-
-터미널 또는 PyCharm에서 아래 예시처럼 실행할 수 있습니다.
-
-```bash
-cd /Users/jeong-yongcheol/Desktop/00_CBNU_AI/My_project/ML_Lecture
-
-python3 Homework_0311/page13_code.py
-python3 Homework_0311/page14_code.py
-python3 Homework_0311/page16_code.py
-python3 Homework_0311/page19_code.py
-
-python3 My_project_0311/page13_code.py
-python3 My_project_0311/page14_code.py
-python3 My_project_0311/page16_code.py
-python3 My_project_0311/page19_code.py
-```
-
-## 8. GitHub 업로드 참고
-
-- 참고 유튜브: [기존 프로젝트 Github(Remote Repository)에 올리기](https://youtu.be/AOn6UUscqQw?si=eo5WK_GSbmj-4LSi)
+- 참고 유튜브:
+  <https://youtu.be/AOn6UUscqQw?si=eo5WK_GSbmj-4LSi>
+- 주제: `기존 프로젝트 Github(Remote Repository)에 올리기`
 
 체크리스트:
 
 - [ ] 준비물: `git scm`, `pycharm`, `github.com id`
-- [ ] PyCharm에서 git에 올릴 프로젝트 불러오기
-- [ ] GitHub에서 새 repository 만들기
+- [ ] pycharm에서 git에 올릴 프로젝트 불러오기(새 project 만들기)
+- [ ] github.com에서 새 repository 만들기
 - [ ] `git init` 하기
 - [ ] `.py` 파일 하나 만들기
 - [ ] `git add` 하기
 - [ ] `git commit` 하기
 - [ ] `git remote`에 GitHub 새 저장소 주소 등록하기
 - [ ] `git push` 하기
-- [ ] 올라갔는지 확인하기
+- [ ] 업로드 확인하기
 - [ ] collaborator 추가하기
 
-## 9. 교과목 정보
+## 14. 참고 사항
 
-- 개설연도-학기: `2026년 1학기`
-- 개설학과: `산업인공지능학`
-- 교과목번호-분반번호: `8884005-01`
-- 교과목명: `머신러닝 프로그래밍`
-- 이수구분: `전공심화`
-- 학점/시수: `3-3-0`
-- 강의시간/강의실: `수 11, 12, 13 / E10-401`
-- 담당교수: `채민선(초빙교원)`
-- E-mail: `mschae@cbnu.ac.kr`
-- 학과전화: `043-249-1257`
-
-## 10. 교과목 개요
-
-머신러닝의 기본 개념과 주요 알고리즘을 이론과 실습을 통해 학습합니다.  
-분류, 회귀, 서포트 벡터 머신, 결정트리, 앙상블 학습, 차원 축소, 군집 분석, 이상탐지 등 전통적 머신러닝 기법을 단계적으로 학습하며, 각 알고리즘의 적용 목적과 한계를 이해하는 것을 목표로 합니다.
-
-또한 모델 훈련, 성능 평가, 하이퍼파라미터 튜닝 등 실무 및 연구 현장에서 필요한 머신러닝 개발 절차를 경험하고, 직접 구현한 결과를 해석하는 능력을 기릅니다.
-
-## 11. 학습 목표
-
-- 머신러닝의 기본 개념과 학습 유형을 이해하고 문제 유형에 맞는 접근 방법을 설명할 수 있다.
-- 머신러닝 알고리즘의 원리와 특징을 이해하고 활용할 수 있다.
-- 주어진 데이터와 문제 상황에 대해 적절한 모델을 선택하고 프로젝트 형태로 문제를 해결할 수 있다.
-
-## 12. 교재
-
-1. 주교재: `핸즈온 머신러닝(3판)`, 오렐리앙 제롱, 한빛미디어, 2023
-2. 부교재: `데싸노트의 실전에서 통하는 머신러닝`, 권시현, 골든래빗, 2022
-3. 부교재: `머신러닝 프로그래밍`, 김성수, 2021
-
-## 13. 비고
-
-- 이 저장소는 수업 실습 결과물과 코드 버전을 날짜별 폴더로 관리합니다.
-- 일부 코드는 `scikit-learn` 없이 `numpy`와 `pandas`만으로 실행 가능하도록 수정되어 있습니다.
-- 생성된 CSV 파일과 결과물도 함께 저장하여 재현성을 높였습니다.
+- 강의 실습 환경과 로컬 경로 설명은 작성 당시 사용 환경을 기준으로 기록했습니다.
+- 이후 주차 실습이 추가되면 README의 저장소 구조와 주차별 학습 정리 표도 함께 갱신하는 것을 권장합니다.
