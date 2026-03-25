@@ -4,6 +4,33 @@
 
 이 저장소는 `ML_Lecture` 폴더 기준으로 구성되어 있으며, 강의 실습 코드와 생성 결과 파일을 날짜별 프로젝트 폴더로 관리합니다.
 
+## Quick Start
+
+처음 실행할 때는 아래 순서대로 보면 됩니다.
+
+1. 프로젝트 폴더 열기
+```bash
+cd /Users/jeong-yongcheol/Desktop/00_CBNU_AI/My_project/ML_Lecture
+```
+
+2. 대표 실습 코드 실행
+```bash
+python3 Homework_0311/page13_code.py
+python3 My_project_0311/page16_code.py
+python3 My_project_0318/page22_gradient_descent_sample.py
+```
+
+3. 결과 확인
+- 생성된 CSV 파일은 각 프로젝트 폴더 안에 저장됩니다.
+- GitHub 저장소 첫 화면에서는 `README.md`와 폴더 구조를 확인할 수 있습니다.
+
+4. 변경 후 GitHub 반영
+```bash
+git add .
+git commit -m "Update lecture files"
+git push cbnu2026 main
+```
+
 ## 1. 강의 자료 링크
 
 - EIS 강의 자료: [https://eisn.cbnu.ac.kr/nxui/index.html?OBSC_YN=0&LNG=ko#main](https://eisn.cbnu.ac.kr/nxui/index.html?OBSC_YN=0&LNG=ko#main)
