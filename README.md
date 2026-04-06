@@ -23,10 +23,14 @@
   - 데이터 분할
   - 시그모이드 함수, 비용 함수, 경사하강법
   - 혼동행렬, 정확도, 정밀도, 재현율, F1-score, ROC Curve
+  - 선형회귀, 최소자승법, OLS와 SGD 비교
+  - 확률적/미니배치/전체배치 경사하강법 비교
+  - Ridge, Lasso 정규화와 회귀 성능 해석
 - 하위 폴더 바로가기:
   - [Homework_0311](./Homework_0311/README.md)
   - [My_project_0311](./My_project_0311/README.md)
   - [My_project_0318](./My_project_0318/README.md)
+  - [My_project_0401](./My_project_0401/)
 
 ## 1. 저장소 정보
 
@@ -110,6 +114,16 @@ cd My_project_0318
 python3 page22_gradient_descent_sample.py
 ```
 
+### 대표 실습 예시 4: 선형회귀 심화 실습
+
+```bash
+cd My_project_0401
+python3 5-1_ordinary_least_squares.py
+python3 5-2_comparison.py
+python3 5-3_comparison.py
+python3 5-4_lasso_ridge.py
+```
+
 ## 7. 대표 실행 예시
 
 ### 주택 데이터 불러오기 예시
@@ -136,6 +150,13 @@ Data columns (total 10 columns):
 - `page22_gradient_descent_sample.py` 실행 시 경사하강법의 파라미터 업데이트 과정을 확인할 수 있습니다.
 - `page27_confusion_matrix_sample.py`, `page33_metrics_sample.py`, `page36_roc_curve_sample.py`를 통해 분류 성능 평가 흐름을 확인할 수 있습니다.
 
+### 선형회귀 실습 예시
+
+- `5-1_ordinary_least_squares.py` 실행 시 OLS 기반 선형회귀, `RMSE`, `R-squared`를 확인할 수 있습니다.
+- `5-2_comparison.py` 실행 시 `Stochastic`, `Mini-batch`, `Full-batch` 경사하강법 차이를 비교할 수 있습니다.
+- `5-3_comparison.py` 실행 시 `OLS`와 `SGD`의 초기 상태 및 수렴 결과를 비교할 수 있습니다.
+- `5-4_lasso_ridge.py` 실행 시 `L1(Lasso)`와 `L2(Ridge)`의 가중치 분포 차이를 확인할 수 있습니다.
+
 ## 8. 강의 노트 및 원본 자료 위치
 
 - 맥북 로컬 참고 경로:
@@ -148,6 +169,7 @@ Data columns (total 10 columns):
 | `My_project_0311` | 데이터 불러오기, 결측치 처리, 스케일링, 데이터 분할 | `page13_code.py`, `page14_code.py`, `page16_code.py`, `page19_code.py` | `housing_train.csv`, `housing_valid.csv`, `housing_test.csv` |
 | `Homework_0311` | 주가 데이터 기반 전처리 및 분할 실습 | `page13_code.py`, `page14_code.py`, `page16_code.py`, `page19_code.py` | `stockdata_processed.csv`, `stockdata_standardized.csv`, `stockdata_normalized.csv`, `stock_train.csv`, `stock_valid.csv`, `stock_test.csv` |
 | `My_project_0318` | 로지스틱 회귀 개념 및 분류 성능 평가 | `page14_sigmoid_sample.py`, `page22_gradient_descent_sample.py`, `page27_confusion_matrix_sample.py`, `page33_metrics_sample.py`, `page36_roc_curve_sample.py` | `page14_sigmoid_sample.png` |
+| `My_project_0401` | 선형회귀, OLS, SGD 비교, Ridge/Lasso 정규화 | `5-1_ordinary_least_squares.py`, `5-2_comparison.py`, `5-3_comparison.py`, `5-4_lasso_ridge.py`, `z_explanation_*.py` | 회귀선 시각화, 배치 방식 비교 그래프, 정규화 비교 그래프 |
 | `Homework_0325` | 후속 실습용 폴더 | 현재 비어 있음 | 추후 추가 예정 |
 
 ## 10. 현재 저장소 구조
@@ -198,6 +220,15 @@ ML_Lecture/
 │   ├── z_Explanation_page33_metrics_sample.py
 │   ├── z_Explanation_page36_roc_curve_sample.py
 │   └── page14_sigmoid_sample.png
+├── My_project_0401/
+│   ├── 5-1_ordinary_least_squares.py
+│   ├── 5-2_comparison.py
+│   ├── 5-3_comparison.py
+│   ├── 5-4_lasso_ridge.py
+│   ├── z_explanation_5-1_ordinary_least_squares.py
+│   ├── z_explanation_5-2_comparison.py
+│   ├── z_explanation_5-3_comparison.py
+│   └── z_explanation_5-4_lasso_ridge.py
 ├── .gitignore
 └── README.md
 ```
@@ -230,12 +261,20 @@ ML_Lecture/
 - 3월 25일 이후 실습을 위한 작업 폴더입니다.
 - 현재는 비어 있으며, 후속 실습 자료가 추가될 예정입니다.
 
+### `My_project_0401`
+
+- 4월 1일 선형회귀 심화 실습을 정리한 폴더입니다.
+- `5-1_ordinary_least_squares.py`는 최소자승법 기반 선형회귀와 성능지표 계산을 다룹니다.
+- `5-2_comparison.py`와 `5-3_comparison.py`는 `SGD`, `Mini-batch`, `Full-batch`, `OLS`의 차이를 비교합니다.
+- `5-4_lasso_ridge.py`는 `Ridge(L2)`와 `Lasso(L1)` 정규화의 가중치 특성을 비교합니다.
+- `z_explanation_*.py` 파일은 같은 코드를 쉬운 한국어 주석으로 풀어 쓴 복습용 버전입니다.
+
 ## 12. 포함 파일 안내
 
 - 이 저장소에는 코드 파일뿐 아니라 실습 중 생성된 CSV 결과물도 함께 포함되어 있습니다.
 - 일부 폴더에는 실행 중 자동 생성된 `__pycache__`가 로컬에 존재할 수 있으나, Git 추적 대상은 아닙니다.
 - 설명용 파일은 강의 복습과 코드 이해를 돕기 위해 별도로 작성한 버전입니다.
-- 설명 파일 이름은 현재 저장소 기준으로 `z_Explanation_*` 형식을 사용합니다.
+- 설명 파일 이름은 폴더에 따라 `z_Explanation_*` 또는 `z_explanation_*` 형식을 사용합니다.
 
 ## 13. GitHub 업로드 관련 메모
 
@@ -260,4 +299,5 @@ ML_Lecture/
 ## 14. 참고 사항
 
 - 강의 실습 환경과 로컬 경로 설명은 작성 당시 사용 환경을 기준으로 기록했습니다.
+- `My_project_0401`의 예제는 `Salary_Data.csv`를 기준으로 실행되도록 구성했습니다.
 - 이후 주차 실습이 추가되면 README의 저장소 구조와 주차별 학습 정리 표도 함께 갱신하는 것을 권장합니다.
