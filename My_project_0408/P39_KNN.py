@@ -19,14 +19,34 @@ scaler = StandardScaler()
 X_train_scaled = scaler.fit_transform(X_train)
 X_test_scaled = scaler.transform(X_test)
 
-# 2. 모델 학습 및 예측
-knn = KNeighborsClassifier(n_neighbors=3)
+# 2. 여러 k 값 비교
+k_candidates = list(range(1, 34, 2))
+k_scores = []
+
+print("\n" + "=" * 50)
+print("[k 값별 정확도 비교]")
+for k in k_candidates:
+    candidate_model = KNeighborsClassifier(n_neighbors=k)
+    candidate_model.fit(X_train_scaled, y_train)
+    candidate_pred = candidate_model.predict(X_test_scaled)
+    candidate_acc = accuracy_score(y_test, candidate_pred)
+    k_scores.append((k, candidate_acc))
+    print(f"k={k}: 정확도 {candidate_acc * 100:.2f}%")
+
+best_k, best_acc = max(k_scores, key=lambda item: item[1])
+print("=" * 50)
+print(f"가장 좋은 k 값: {best_k} (정확도 {best_acc * 100:.2f}%)")
+print("=" * 50 + "\n")
+
+# 3. 가장 좋은 k 값으로 최종 모델 학습 및 예측
+knn = KNeighborsClassifier(n_neighbors=best_k)
 knn.fit(X_train_scaled, y_train)
 y_pred = knn.predict(X_test_scaled)
 
 # === 결과 표 출력 모듈 ===
 
 print("\n" + "=" * 50)
+print(f"최종 선택된 k 값: {best_k}")
 print(f"붓꽃 품종 분류 정확도: {accuracy_score(y_test, y_pred) * 100:.2f}%")
 print("=" * 50 + "\n")
 

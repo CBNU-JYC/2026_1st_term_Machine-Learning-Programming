@@ -6,9 +6,10 @@
 2. 입력값(X)과 정답(y)으로 나눕니다.
 3. 학습용 데이터와 시험용 데이터로 나눕니다.
 4. 숫자 크기를 비슷하게 맞추기 위해 스케일링을 합니다.
-5. KNN 모델을 학습시킵니다.
-6. 시험용 데이터로 예측합니다.
-7. 정확도, 분류 리포트, 혼동 행렬을 출력합니다.
+5. 여러 k 값으로 KNN 모델을 시험해 봅니다.
+6. 가장 성능이 좋은 k 값을 고릅니다.
+7. 그 k 값으로 다시 예측합니다.
+8. 정확도, 분류 리포트, 혼동 행렬을 출력합니다.
 
 이 예제에서 중요한 점은 KNN이 "거리"를 사용한다는 것입니다.
 그래서 숫자 크기가 너무 다르면 큰 숫자가 더 큰 영향을 줄 수 있습니다.
@@ -58,9 +59,50 @@ X_train_scaled = scaler.fit_transform(X_train)
 # 여기서 fit을 다시 하면 시험 문제를 미리 보고 공부하는 것과 비슷해져서 안 됩니다.
 X_test_scaled = scaler.transform(X_test)
 
-# KNN 분류 모델을 만듭니다.
-# n_neighbors=3 은 가장 가까운 3명의 이웃을 보고 결정하겠다는 뜻입니다.
-knn = KNeighborsClassifier(n_neighbors=3)
+# 시험해 볼 k 값 후보들을 리스트로 준비합니다.
+# range(1, 34, 2)는 1부터 시작해서 2씩 커지는 숫자를 34 전까지 만든다는 뜻입니다.
+# 그래서 1, 3, 5, 7, ..., 33이 만들어집니다.
+# 홀수를 자주 쓰는 이유는 동점이 나는 일을 줄이는 데 도움이 되기 때문입니다.
+k_candidates = list(range(1, 34, 2))
+
+# 각 k 값의 결과를 저장할 빈 리스트를 만듭니다.
+k_scores = []
+
+# 여러 k 값을 비교해 보기 위한 제목과 구분선을 출력합니다.
+print("\n" + "=" * 50)
+print("[k 값별 정확도 비교]")
+
+# k 후보를 하나씩 꺼내서 반복합니다.
+for k in k_candidates:
+    # 현재 k 값으로 KNN 모델을 하나 만듭니다.
+    candidate_model = KNeighborsClassifier(n_neighbors=k)
+
+    # 학습용 데이터로 모델을 학습시킵니다.
+    candidate_model.fit(X_train_scaled, y_train)
+
+    # 테스트용 데이터를 넣어서 예측 결과를 만듭니다.
+    candidate_pred = candidate_model.predict(X_test_scaled)
+
+    # 예측이 얼마나 잘 맞았는지 정확도를 계산합니다.
+    candidate_acc = accuracy_score(y_test, candidate_pred)
+
+    # 나중에 가장 좋은 k를 찾기 위해 (k, 정확도)를 함께 저장합니다.
+    k_scores.append((k, candidate_acc))
+
+    # 현재 k 값의 결과를 한 줄씩 출력합니다.
+    print(f"k={k}: 정확도 {candidate_acc * 100:.2f}%")
+
+# max 함수로 가장 정확도가 높은 k 값을 찾습니다.
+# key=lambda item: item[1] 은 (k, 정확도) 중에서 두 번째 값인 정확도를 기준으로 비교하라는 뜻입니다.
+best_k, best_acc = max(k_scores, key=lambda item: item[1])
+
+# 가장 좋은 결과를 출력합니다.
+print("=" * 50)
+print(f"가장 좋은 k 값: {best_k} (정확도 {best_acc * 100:.2f}%)")
+print("=" * 50 + "\n")
+
+# 이제 가장 좋은 k 값으로 최종 KNN 모델을 만듭니다.
+knn = KNeighborsClassifier(n_neighbors=best_k)
 
 # 스케일링된 학습용 데이터를 이용해 모델을 학습합니다.
 knn.fit(X_train_scaled, y_train)
@@ -70,6 +112,9 @@ y_pred = knn.predict(X_test_scaled)
 
 # 보기 좋게 구분선을 출력합니다.
 print("\n" + "=" * 50)
+
+# 어떤 k 값이 최종 선택되었는지 먼저 보여 줍니다.
+print(f"최종 선택된 k 값: {best_k}")
 
 # 실제 정답과 예측 정답을 비교해서 전체 정확도를 계산합니다.
 print(f"붓꽃 품종 분류 정확도: {accuracy_score(y_test, y_pred) * 100:.2f}%")

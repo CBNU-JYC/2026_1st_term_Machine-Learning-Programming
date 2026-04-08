@@ -31,6 +31,7 @@
   - [My_project_0311](./My_project_0311/README.md)
   - [My_project_0318](./My_project_0318/README.md)
   - [My_project_0401](./My_project_0401/)
+  - [My_project_0408](./My_project_0408/)
 
 ## 1. 저장소 정보
 
@@ -141,6 +142,14 @@ python3 5-3_comparison.py
 python3 5-4_lasso_ridge.py
 ```
 
+### 대표 실습 예시 5: KNN 분류 및 k 값 비교 실습
+
+```bash
+cd My_project_0408
+python3 P39_KNN.py
+python3 z_explanation_P39_KNN.py
+```
+
 ## 7. 대표 실행 예시
 
 ### 주택 데이터 불러오기 예시
@@ -174,6 +183,12 @@ Data columns (total 10 columns):
 - `5-3_comparison.py` 실행 시 `OLS`와 `SGD`의 초기 상태 및 수렴 결과를 비교할 수 있습니다.
 - `5-4_lasso_ridge.py` 실행 시 `L1(Lasso)`와 `L2(Ridge)`의 가중치 분포 차이를 확인할 수 있습니다.
 
+### KNN 실습 예시
+
+- `P39_KNN.py` 실행 시 `iris.csv`를 사용해 KNN 분류를 수행하고, `k=1, 3, 5, ..., 33` 후보의 정확도를 비교합니다.
+- 가장 성능이 좋은 `k` 값을 자동 선택한 뒤 최종 정확도, 분류 리포트, 혼동 행렬을 출력합니다.
+- `z_explanation_P39_KNN.py`는 같은 내용을 초보자용 주석으로 자세히 풀어 쓴 설명 버전입니다.
+
 ## 8. 강의 노트 및 원본 자료 위치
 
 - 맥북 로컬 참고 경로:
@@ -187,6 +202,7 @@ Data columns (total 10 columns):
 | `Homework_0311` | 주가 데이터 기반 전처리 및 분할 실습 | `page13_code.py`, `page14_code.py`, `page16_code.py`, `page19_code.py` | `stockdata_processed.csv`, `stockdata_standardized.csv`, `stockdata_normalized.csv`, `stock_train.csv`, `stock_valid.csv`, `stock_test.csv` |
 | `My_project_0318` | 로지스틱 회귀 개념 및 분류 성능 평가 | `page14_sigmoid_sample.py`, `page22_gradient_descent_sample.py`, `page27_confusion_matrix_sample.py`, `page33_metrics_sample.py`, `page36_roc_curve_sample.py` | `page14_sigmoid_sample.png` |
 | `My_project_0401` | 선형회귀, OLS, SGD 비교, Ridge/Lasso 정규화 | `5-1_ordinary_least_squares.py`, `5-2_comparison.py`, `5-3_comparison.py`, `5-4_lasso_ridge.py`, `z_explanation_*.py` | 회귀선 시각화, 배치 방식 비교 그래프, 정규화 비교 그래프 |
+| `My_project_0408` | KNN 분류, 하이퍼파라미터 `k` 비교, 초보자용 설명 코드 작성 | `P39_KNN.py`, `iris.csv`, `z_explanation_P39_KNN.py` | `k` 값별 정확도 비교 출력, 분류 리포트, 혼동 행렬 |
 | `Homework_0325` | 후속 실습용 폴더 | 현재 비어 있음 | 추후 추가 예정 |
 
 ## 10. 현재 저장소 구조
@@ -246,6 +262,10 @@ ML_Lecture/
 │   ├── z_explanation_5-2_comparison.py
 │   ├── z_explanation_5-3_comparison.py
 │   └── z_explanation_5-4_lasso_ridge.py
+├── My_project_0408/
+│   ├── P39_KNN.py
+│   ├── iris.csv
+│   └── z_explanation_P39_KNN.py
 ├── .gitignore
 └── README.md
 ```
@@ -285,6 +305,13 @@ ML_Lecture/
 - `5-2_comparison.py`와 `5-3_comparison.py`는 `SGD`, `Mini-batch`, `Full-batch`, `OLS`의 차이를 비교합니다.
 - `5-4_lasso_ridge.py`는 `Ridge(L2)`와 `Lasso(L1)` 정규화의 가중치 특성을 비교합니다.
 - `z_explanation_*.py` 파일은 같은 코드를 쉬운 한국어 주석으로 풀어 쓴 복습용 버전입니다.
+
+### `My_project_0408`
+
+- 4월 8일 KNN 분류 실습을 정리한 폴더입니다.
+- `P39_KNN.py`는 `iris.csv`를 이용해 KNN 분류를 수행하고, `k=1`부터 `33`까지 홀수 후보를 자동 비교합니다.
+- 가장 좋은 `k`를 선택한 뒤 최종 정확도, 분류 리포트, 혼동 행렬을 출력하도록 구성했습니다.
+- `z_explanation_P39_KNN.py`는 같은 코드를 초보자용 주석과 설명으로 풀어 쓴 복습용 버전입니다.
 
 ## 12. 포함 파일 안내
 
